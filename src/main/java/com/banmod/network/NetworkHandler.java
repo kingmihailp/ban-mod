@@ -9,8 +9,6 @@ import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 
-import java.util.Optional;
-
 public class NetworkHandler {
 
     private static final String PROTOCOL_VERSION = "1";

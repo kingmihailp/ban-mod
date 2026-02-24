@@ -106,7 +106,7 @@ public class BanScreenCommand {
                 .then(Commands.literal("reload")
                     .executes(ctx -> {
                         // Force Forge to re-read the TOML from disk
-                        net.minecraftforge.fml.config.ModConfig.Type.SERVER.extension();
+                        BanScreenConfig.SPEC.afterReload();
                         ctx.getSource().sendSuccess(
                                 () -> Component.literal("§aBanMod config reloaded."), false);
                         return 1;

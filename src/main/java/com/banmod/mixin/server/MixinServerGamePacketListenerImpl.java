@@ -48,7 +48,7 @@ public abstract class MixinServerGamePacketListenerImpl {
 
             // Check if this player is currently banned
             boolean isBanned = playerList.getBans().isBanned(player.getGameProfile())
-                    || playerList.getIpBans().isBanned(player.connection.getRemoteAddress());
+                    || playerList.getIpBans().isBanned(player.connection.connection.getRemoteAddress());
 
             if (!isBanned) return;
 
