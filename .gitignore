@@ -1,0 +1,19 @@
+# Gradle
+.gradle/
+build/
+out/
+run/
+
+# IDE
+.idea/
+.eclipse/
+*.iml
+*.ipr
+*.iws
+
+# Generated
+src/generated/
+
+# OS
+.DS_Store
+Thumbs.db
