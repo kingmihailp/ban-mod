@@ -5,6 +5,7 @@ import com.banmod.util.ColorUtils;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.TitleScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -59,8 +60,9 @@ public class CustomBanScreen extends Screen {
                         // Return to previous screen
                         minecraft.setScreen(null);
                     } else {
-                        minecraft.setScreen(null);
-                        minecraft.clearLevel();
+                        // clearLevel(Screen) is the public API in MC 1.20.1;
+                        // it cleans up the world state and shows the given screen.
+                        minecraft.clearLevel(new TitleScreen());
                     }
                 })
                 .bounds(bx, by, bw, bh)
